@@ -50,11 +50,11 @@ export default function UserHeader(){
       </nav>
       {/* .navbar */}
       <i className="mobile-nav-toggle mobile-nav-show bi bi-list"  onClick={mobileNavToogle}/>
-      {/* <ul>
+      <ul>
         <li>
           <a className="nav-link active" aria-current="page" href="/"Home/>
         </li>
-      </ul> */}
+      </ul>
       <i className="mobile-nav-toggle mobile-nav-hide d-none bi bi-x" />
     </div>
   </header>
