@@ -26,7 +26,7 @@ export default function UserHeader(){
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/Category">Category</Link>
+            <Link to="/Theme">Theme</Link>
           </li>
           <li>
             <Link to="/Problem">Problem Statement</Link>
@@ -50,11 +50,14 @@ export default function UserHeader(){
       </nav>
       {/* .navbar */}
       <i className="mobile-nav-toggle mobile-nav-show bi bi-list"  onClick={mobileNavToogle}/>
-      <ul>
+      {/* <ul>
         <li>
           <a className="nav-link active" aria-current="page" href="/"Home/>
         </li>
-      </ul>
+        <li>
+          <a className="nav-link active" aria-current="page" href="/Category"Category/>
+        </li>
+      </ul> */}
       <i className="mobile-nav-toggle mobile-nav-hide d-none bi bi-x" />
     </div>
   </header>
