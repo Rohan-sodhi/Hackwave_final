@@ -3,6 +3,13 @@ import { toast } from "react-toastify"
 import { signOut } from "firebase/auth"
 import { auth } from "../../Firebase"
 export default function Header() {
+  const mobileNavShow = document?.querySelector('.mobile-nav-show');
+  const mobileNavHide = document?.querySelector('.mobile-nav-hide');
+  function mobileNavToogle() {
+    document.querySelector('body').classList.toggle('mobile-nav-active');
+    mobileNavShow?.classList.toggle('d-none');
+    mobileNavHide?.classList.toggle('d-none');
+  }
   const userId=sessionStorage.getItem("userId")
   const nav=useNavigate()
   const logout=()=>{
@@ -58,7 +65,7 @@ export default function Header() {
         </ul>
       </nav>
       {/* .navbar */}
-      <i className="mobile-nav-toggle mobile-nav-show bi bi-list" />
+      <i className="mobile-nav-toggle mobile-nav-show bi bi-list"  onClick={mobileNavToogle}/>
       <i className="mobile-nav-toggle mobile-nav-hide d-none bi bi-x" />
     </div>
   </header>

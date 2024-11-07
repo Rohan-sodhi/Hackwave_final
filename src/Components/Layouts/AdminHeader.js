@@ -4,6 +4,13 @@ import { auth } from "../../Firebase";
 import { signOut } from "firebase/auth";
 import { toast } from "react-toastify";
 export default function AdminHeader(){
+  const mobileNavShow = document?.querySelector('.mobile-nav-show');
+  const mobileNavHide = document?.querySelector('.mobile-nav-hide');
+  function mobileNavToogle() {
+    document.querySelector('body').classList.toggle('mobile-nav-active');
+    mobileNavShow?.classList.toggle('d-none');
+    mobileNavHide?.classList.toggle('d-none');
+  }
   const nav=useNavigate()
   const logout=()=>{
       if(window.confirm("Do you really want to Logout?")){
@@ -66,7 +73,7 @@ export default function AdminHeader(){
         </ul>
       </nav>
       {/* .navbar */}
-      <i className="mobile-nav-toggle mobile-nav-show bi bi-list" />
+      <i className="mobile-nav-toggle mobile-nav-show bi bi-list" onClick={mobileNavToogle}/>
       <i className="mobile-nav-toggle mobile-nav-hide d-none bi bi-x" />
     </div>
   </header>

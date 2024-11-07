@@ -2,6 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default function UserHeader(){
+  const mobileNavShow = document?.querySelector('.mobile-nav-show');
+  const mobileNavHide = document?.querySelector('.mobile-nav-hide');
+  function mobileNavToogle() {
+    document.querySelector('body').classList.toggle('mobile-nav-active');
+    mobileNavShow?.classList.toggle('d-none');
+    mobileNavHide?.classList.toggle('d-none');
+  }
     return(
     <>
 <header id="header" className="header d-flex align-items-center">
@@ -42,7 +49,7 @@ export default function UserHeader(){
         </ul>
       </nav>
       {/* .navbar */}
-      <i className="mobile-nav-toggle mobile-nav-show bi bi-list" />
+      <i className="mobile-nav-toggle mobile-nav-show bi bi-list"  onClick={mobileNavToogle}/>
       {/* <ul>
         <li>
           <a className="nav-link active" aria-current="page" href="/"Home/>
