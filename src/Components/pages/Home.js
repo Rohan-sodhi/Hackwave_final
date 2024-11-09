@@ -69,7 +69,7 @@ export default function Home() {
               </div>
               <h4 className="title">
                 <Link to="" className="stretched-link">
-                  Ingeniouus
+                  Ingenious
                 </Link>
               </h4>
             </div>
