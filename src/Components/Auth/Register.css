@@ -1,0 +1,22 @@
+/* Prevent browser autofill from overriding your list */
+input::-webkit-autofill {
+    transition: background-color 5000s ease-in-out 0s;
+  }
+  
+  /* Ensure white background for dropdowns */
+  option {
+    background-color: white !important;
+    color: black;
+  }
+  
+  /* datalist scroll */
+  datalist {
+    max-height: 150px;
+    overflow-y: auto;
+  }
+  
+  /* Ensure input box doesn't trigger saved browser suggestions */
+  input[list] {
+    background-color: white;
+  }
+  

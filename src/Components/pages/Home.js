@@ -16,14 +16,14 @@ export default function Home() {
       <div className="row gy-5" data-aos="fade-in">
         <div className="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start">
           <h2>
-           HackWave
+           ByteVerse 1.0
           </h2>
           <p>
-          Welcome to Hackwave, where creativity meets technology! Hackwave is an exhilarating hackathon designed to bring together the brightest minds in tech to tackle real-world challenges through innovative solutions.
+          Welcome to ByteVerse 1.0, where creativity meets technology! ByteVerse 1.0 is an exhilarating hackathon designed to bring together the brightest minds in tech to tackle real-world challenges through innovative solutions.
           </p>
           <div className="d-flex justify-content-center justify-content-lg-start">
             <Link to="/Register" className="btn btn-hover btn btn-info justify-conent-center py-3 px-4 me-3">
-              Get Started
+              Register Here
             </Link>
           </div>
         </div>

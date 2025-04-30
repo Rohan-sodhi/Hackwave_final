@@ -46,13 +46,13 @@ export default function AdminHeader(){
             </ul>
           </li>
          
-              <li className="dropdown">
+              {/* <li className="dropdown">
               <Link to="/admin/manageproblem">Problem Statement</Link>
               <ul className="dropdown-menu">
                 <li><Link to="/admin/addproblem">Add</Link></li>
                 <li><Link to="/admin/manageproblem">Manage</Link></li>
               </ul>
-            </li>
+            </li> */}
   
   <li className="dropdown">
     <Link >Event</Link>

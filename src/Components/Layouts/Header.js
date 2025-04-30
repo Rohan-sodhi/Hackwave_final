@@ -28,7 +28,7 @@ export default function Header() {
         {/* Uncomment the line below if you also wish to use an image logo */}
         {/* <img src="assets/img/logo.png" alt=""> */}
         <h1>
-        Hackwave<span>.</span>
+        ByteVerse 1.0<span>.</span>
         </h1>
       </Link>
       <nav id="navbar" className="navbar">
@@ -45,9 +45,9 @@ export default function Header() {
           <li>
             <Link to="/event">Event</Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/problemStatement">Problem Statement</Link>
-          </li>
+          </li> */}
           
           {
             !!userId && 

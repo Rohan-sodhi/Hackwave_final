@@ -72,10 +72,10 @@ export default function About() {
                 className="img-fluid rounded-4"
                 alt=""
               />
-              <Link
+              {/* <Link
                 to="https://www.youtube.com/watch?v=LlqqM1a1GQI"
                 className="glightbox play-btn"
-              />
+              /> */}
             </div>
           </div>
         </div>
