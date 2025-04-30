@@ -126,8 +126,8 @@ export default function Register() {
   const handleStateSelection = (selectedState) => {
     setState(selectedState);
     setShowStateDropdown(false);
-    setCity("");
-    setFilteredCities([]);
+    setCity("");  // Reset city when state is selected
+    setFilteredCities([]); // Reset city options when state is selected
   };
 
   const handleCitySelection = (selectedCity) => {

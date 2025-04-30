@@ -1,121 +1,127 @@
+import { Link } from "react-router-dom";
+
 export default function Contact() {
-    return(
-        <>
-  {/* ======= Contact Section ======= */}
-  <section id="contact" className="contact">
-    <div className="container" data-aos="fade-up">
-      <div className="section-header">
-        <h2>Contact</h2>
-        <p>
-          Nulla dolorum nulla nesciunt rerum facere sed ut inventore quam porro
-          nihil id ratione ea sunt quis dolorem dolore earum
-        </p>
-      </div>
-      <div className="row gx-lg-0 gy-4">
-        <div className="col-lg-4">
-          <div className="info-container d-flex flex-column align-items-center justify-content-center">
-            <div className="info-item d-flex">
-              <i className="bi bi-geo-alt flex-shrink-0" />
-              <div>
-                <h4>Location:</h4>
-                <p>A108 Adam Street, New York, NY 535022</p>
+  return (
+    <>
+      {/* ======= Contact Section ======= */}
+      <section id="contact" className="contact">
+        <div className="container" data-aos="fade-up">
+          <div className="section-header">
+            <h2>Contact</h2>
+            {/* <p>
+              Nulla dolorum nulla nesciunt rerum facere sed ut inventore quam porro
+              nihil id ratione ea sunt quis dolorem dolore earum
+            </p> */}
+          </div>
+
+          {/* Add a flex container to display the two sections horizontally with space */}
+          <div className="row gx-lg-0 gy-4 d-flex justify-content-between">
+            <div className="col-lg-4">
+              <div className="info-container d-flex flex-column align-items-start justify-content-start gap-4 p-4 border shadow-sm">
+                <div className="info-item d-flex">
+                  <i className="bi bi-geo-alt flex-shrink-0" />
+                  <div>
+                    <h4>Location:</h4>
+                    <Link
+                      to="https://maps.app.goo.gl/QVeix1ZCy76iefAv7"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        color: '#444444',
+                        textDecoration: 'none',
+                        transition: 'color 0.3s ease',
+                      }}
+                      onMouseOver={(e) => e.target.style.color = '#008374'}
+                      onMouseOut={(e) => e.target.style.color = '#444444'}
+                    >
+                      <p>CT Group of Institutions Shahpur, Jalandhar</p>
+                    </Link>
+                  </div>
+                </div>
+                {/* End Info Item */}
+                <div className="info-item d-flex">
+                  <i className="bi bi-envelope flex-shrink-0" />
+                  <div>
+                    <h4>Email:</h4>
+                    <p>hackathonsingh@gmail.com</p>
+                  </div>
+                </div>
+                {/* End Info Item */}
+                <div className="info-item d-flex">
+                  <i className="bi bi-phone flex-shrink-0" />
+                  <div>
+                    <h4>Call:</h4>
+                    <p>62840-27120</p>
+                  </div>
+                </div>
+                {/* End Info Item */}
               </div>
             </div>
-            {/* End Info Item */}
-            <div className="info-item d-flex">
-              <i className="bi bi-envelope flex-shrink-0" />
-              <div>
-                <h4>Email:</h4>
-                <p>info@example.com</p>
+
+
+            {/* Second column for another contact info */}
+            <div className="col-lg-4">
+              <div className="info-container d-flex flex-column align-items-start justify-content-start p-4 border shadow-sm">
+                <div className="info-item d-flex">
+                  <div>
+                    <h4>Head Co-ordinators: Ms. Preet Saini and Dr. Ankita Gupta</h4>
+                    <i className="bi bi-phone flex-shrink-0" />
+                    <p>Contact: - 94170-04246 &<br /> 94785-39300</p>
+                  </div>
+                </div>
+                {/* End Info Item */}
+                <div className="info-item d-flex">
+                  {/* <i className="bi bi-envelope flex-shrink-0" /> */}
+                  <div>
+                    <h4>Developer Team: Rohan Sodhi</h4>
+                    <i className="bi bi-phone flex-shrink-0" />
+                    <p>Contact :- 83600-20881</p>
+                  </div>
+                </div>
+                {/* End Info Item */}
+                <div className="info-item d-flex">
+                  <div>
+                    <h4>Marketing & PR Team: Varun</h4>
+                    <i className="bi bi-phone flex-shrink-0" />
+                    <p>Contact :- 80544-36024</p>
+                  </div>
+                </div>
+                {/* End Info Item */}
               </div>
             </div>
-            {/* End Info Item */}
-            <div className="info-item d-flex">
-              <i className="bi bi-phone flex-shrink-0" />
-              <div>
-                <h4>Call:</h4>
-                <p>+1 5589 55488 55</p>
+
+            <div className="col-lg-4">
+              <div className="info-container d-flex flex-column align-items-start justify-content-start p-4 border shadow-sm">
+                <div className="info-item d-flex">
+                  <div>
+                    <h4>Registration Team: Himanshu Sodhi and Arun</h4>
+                    <i className="bi bi-phone flex-shrink-0" />
+                    <p>Contact : - 62840-27120 & <br /> 62844-45269</p>
+                  </div>
+                </div>
+                {/* End Info Item */}
+                <div className="info-item d-flex">
+                  <div>
+                    <h4>Technical Support: Madhav and Arun</h4>
+                    <i className="bi bi-phone flex-shrink-0" />
+                    <p>Contact : - 98722-75894 &<br /> 62844-45269</p>
+                  </div>
+                </div>
+                {/* End Info Item */}
+                <div className="info-item d-flex">
+                  <div>
+                    <h4>Help Desk: Kashish</h4>
+                    <i className="bi bi-phone flex-shrink-0" />
+                    <p>Contact : - 87077-73540</p>
+                  </div>
+                </div>
+                {/* End Info Item */}
               </div>
             </div>
-            {/* End Info Item */}
-            <div className="info-item d-flex">
-              <i className="bi bi-clock flex-shrink-0" />
-              <div>
-                <h4>Open Hours:</h4>
-                <p>Mon-Sat: 11AM - 23PM</p>
-              </div>
-            </div>
-            {/* End Info Item */}
           </div>
         </div>
-        <div className="col-lg-8">
-          <form
-            action="forms/contact.php"
-            method="post"
-            role="form"
-            className="php-email-form"
-          >
-            <div className="row">
-              <div className="col-md-6 form-group">
-                <input
-                  type="text"
-                  name="name"
-                  className="form-control"
-                  id="name"
-                  placeholder="Your Name"
-                  required=""
-                />
-              </div>
-              <div className="col-md-6 form-group mt-3 mt-md-0">
-                <input
-                  type="email"
-                  className="form-control"
-                  name="email"
-                  id="email"
-                  placeholder="Your Email"
-                  required=""
-                />
-              </div>
-            </div>
-            <div className="form-group mt-3">
-              <input
-                type="text"
-                className="form-control"
-                name="subject"
-                id="subject"
-                placeholder="Subject"
-                required=""
-              />
-            </div>
-            <div className="form-group mt-3">
-              <textarea
-                className="form-control"
-                name="message"
-                rows={7}
-                placeholder="Message"
-                required=""
-                defaultValue={""}
-              />
-            </div>
-            <div className="my-3">
-              <div className="loading">Loading</div>
-              <div className="error-message" />
-              <div className="sent-message">
-                Your message has been sent. Thank you!
-              </div>
-            </div>
-            <div className="text-center">
-              <button type="submit">Send Message</button>
-            </div>
-          </form>
-        </div>
-        {/* End Contact Form */}
-      </div>
-    </div>
-  </section>
-  {/* End Contact Section */}
-  {/* End #main */}
-</>
-
-    )
+      </section>
+    </>
+  );
 }
+

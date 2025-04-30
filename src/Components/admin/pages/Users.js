@@ -66,6 +66,8 @@ export default function Users(){
                         <td>Email</td>
                         <td>Contact</td>
                         <td>Qualification <br/> College/University</td>
+                        <td>State</td>
+                        <td>City</td>
                         <td>Status</td>
                         <td>Joined At</td>
                         <td>Action</td>
@@ -82,6 +84,8 @@ export default function Users(){
                                 <td>{el?.data?.email}</td>
                                 <td>{el?.data?.contact}</td>
                                 <td>{el?.data?.qualification}- <br/>{el?.data?.college}</td>
+                                <td>{el?.data?.State} <br/>{el?.data?.state}</td>
+                                <td>{el?.data?.City} <br/>{el?.data?.city}</td>
                                 <td>{el?.data?.status?"Active":"In-Active"}</td>
                                 <td>{getDate(el?.data?.createdAt)}</td>
                                 <td>

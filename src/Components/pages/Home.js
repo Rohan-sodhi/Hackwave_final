@@ -117,6 +117,8 @@ export default function Home() {
         <About/>
        
         <Frequently/>
+        <Contact/>
+        {/* <Ourteam/> */}
         </>
     )
 }
