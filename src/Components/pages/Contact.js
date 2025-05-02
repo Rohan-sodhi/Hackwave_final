@@ -48,10 +48,10 @@ export default function Contact() {
                 </div>
                 {/* End Info Item */}
                 <div className="info-item d-flex">
-                  <i className="bi bi-phone flex-shrink-0" />
                   <div>
-                    <h4>Call:</h4>
-                    <p>62840-27120</p>
+                    <h4>Help Desk: Kashish and Madhav</h4>
+                    <i className="bi bi-phone flex-shrink-0" />
+                    <p>Contact : - 87077-73540 &<br/> 98722-75894</p>
                   </div>
                 </div>
                 {/* End Info Item */}
@@ -110,9 +110,9 @@ export default function Contact() {
                 {/* End Info Item */}
                 <div className="info-item d-flex">
                   <div>
-                    <h4>Help Desk: Kashish</h4>
+                    <h4>Help Desk: Kashish and Madhav</h4>
                     <i className="bi bi-phone flex-shrink-0" />
-                    <p>Contact : - 87077-73540</p>
+                    <p>Contact : - 87077-73540 &<br/> 98722-75894</p>
                   </div>
                 </div>
                 {/* End Info Item */}

@@ -62,7 +62,8 @@ export default function Users(){
                 <thead className="table-dark">
                     <tr>
                         <td>Sno</td>
-                        <td>Full Name</td>
+                        <td>Team Name</td>
+                        <td>Team Size</td>
                         <td>Email</td>
                         <td>Contact</td>
                         <td>Qualification <br/> College/University</td>
@@ -80,7 +81,8 @@ export default function Users(){
                         (el,index)=>(
                             <tr key={index}>
                                 <td>{index+1}</td>
-                                <td>{el?.data?.firstname} {el?.data?.lastname}</td>
+                                <td>{el?.data?.teamName}</td>
+                                <td>{el?.data?.teamSize}</td>
                                 <td>{el?.data?.email}</td>
                                 <td>{el?.data?.contact}</td>
                                 <td>{el?.data?.qualification}- <br/>{el?.data?.college}</td>

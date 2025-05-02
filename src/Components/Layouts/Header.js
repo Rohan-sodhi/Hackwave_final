@@ -24,9 +24,8 @@ export default function Header() {
         <>
          <header id="header" className="header d-flex align-items-center">
     <div className="container-fluid container-xl d-flex align-items-center justify-content-between">
-      <Link to="index.html" className="logo d-flex align-items-center">
-        {/* Uncomment the line below if you also wish to use an image logo */}
-        {/* <img src="assets/img/logo.png" alt=""> */}
+      <Link to="/" className="logo d-flex align-items-center">
+        {/* <img src="/assets/img/Your paragraph text.png" alt="ByteVerse Logo" style={{ maxHeight: '50px', marginRight: '10px' }} /> */}
         <h1>
         ByteVerse 1.0<span>.</span>
         </h1>
@@ -36,15 +35,23 @@ export default function Header() {
           <li>
             <Link to="/">Home</Link>
           </li>
-          <li>
-            <Link to="/About">About</Link>
-          </li>
+         
           <li>
             <Link to="/theme">Themes</Link>
           </li>
           <li>
             <Link to="/event">Event</Link>
           </li>
+          <li>
+            <Link to="/About">About</Link>
+          </li>
+          <li>
+            <Link to="/Sponsors">Sponsors</Link>
+          </li>
+          <li>
+            <Link to="/Contact">Contact</Link>
+          </li>
+         
           {/* <li>
             <Link to="/problemStatement">Problem Statement</Link>
           </li> */}

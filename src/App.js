@@ -32,6 +32,7 @@ import ViewEventDetails from "./Components/users/pages/ViewEventDetails.js";
 import ViewApplication from "./Components/users/pages/ViewApplication.js";
 import AdminViewApplication from "./Components/admin/pages/AdminViewApplication.js";
 import Dashboard from "./Components/admin/Dashboard.js";
+import Sponsors from "./Components/Layouts/Sponsors.js";
 
 function App() {
   
@@ -55,6 +56,7 @@ function App() {
         <Route path="/event" element={<ViewEvents/>}/>
         <Route path="/viewEventDetails/:id" element={<ViewEventDetails/>}/>
         <Route path="/myregistration" element={<ViewApplication/>}/>
+        <Route path="/Sponsors" element={<Sponsors/>}/>
         </Route>
 
         <Route path="/admin" element={<AdminMaster/>}>

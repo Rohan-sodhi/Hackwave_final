@@ -10,9 +10,9 @@ export default function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [contact, setContact] = useState("");
-  const [firstname, setFirstName] = useState("");
+  const [teamName, setTeamName] = useState("");
+  const [teamSize, setTeamSize] = useState("");
   const [qualification, setqualification] = useState("");
-  const [lastname, setLastName] = useState("");
   const [college, setCollege] = useState("");
   const [state, setState] = useState("");
   const [city, setCity] = useState("");
@@ -21,6 +21,7 @@ export default function Register() {
   const [filteredCities, setFilteredCities] = useState([]);
   const [showStateDropdown, setShowStateDropdown] = useState(false);
   const [showCityDropdown, setShowCityDropdown] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
   const nav = useNavigate();
 
   const stateCityMap = {
@@ -45,8 +46,8 @@ export default function Register() {
     setLoad(true);
     try {
       let data = {
-        firstname,
-        lastname,
+        teamName,
+        teamSize,
         email,
         contact,
         qualification,
@@ -63,8 +64,7 @@ export default function Register() {
       sessionStorage.setItem("userId", userId);
       sessionStorage.setItem("email", data.email);
       sessionStorage.setItem("userType", data.userType);
-      sessionStorage.setItem("firstName", data.firstname);
-      sessionStorage.setItem("lastName", data.lastname);
+      sessionStorage.setItem("teamName", data.teamName);
       setTimeout(() => { nav("/") }, 500);
     } catch (err) {
       toast.error(err.message);
@@ -169,12 +169,26 @@ export default function Register() {
                 <form onSubmit={handleForm} method="post">
                   <div className="row gx-4 gy-3">
                     <div className="col-xl-6 col-md-6">
-                      <label>First Name</label>
-                      <input type="text" className="form-control bg-white border-0 py-3 px-4" value={firstname} onChange={(e) => setFirstName(e.target.value)} />
+                      <label>Team Name</label>
+                      <input 
+                        type="text" 
+                        className="form-control bg-white border-0 py-3 px-4" 
+                        value={teamName} 
+                        onChange={(e) => setTeamName(e.target.value)}
+                        placeholder="Enter your team name" 
+                      />
                     </div>
                     <div className="col-xl-6 col-md-6">
-                      <label>Last Name</label>
-                      <input type="text" className="form-control bg-white border-0 py-3 px-4" value={lastname} onChange={(e) => setLastName(e.target.value)} />
+                      <label>Team Size</label>
+                      <input 
+                        type="number" 
+                        className="form-control bg-white border-0 py-3 px-4" 
+                        value={teamSize} 
+                        onChange={(e) => setTeamSize(e.target.value)}
+                        placeholder="Enter team size" 
+                        min="3"
+                        max="5"
+                      />
                     </div>
                   </div>
 
@@ -185,8 +199,31 @@ export default function Register() {
                     </div>
                     <div className="col-xl-6">
                       <label>Password</label>
-                      <input type="password" className="form-control bg-white border-0 py-3 px-4" value={password} onChange={(e) => setPassword(e.target.value)} />
+                      <div className="position-relative">
+                        <input 
+                          type={showPassword ? "text" : "password"} 
+                          className="form-control bg-white border-0 py-3 px-4" 
+                          value={password} 
+                          onChange={(e) => setPassword(e.target.value)}
+                          placeholder="Enter your password"
+                        />
+                        <button
+                          type="button"
+                          className="btn position-absolute end-0 top-50 translate-middle-y"
+                          onClick={() => setShowPassword(!showPassword)}
+                          style={{ 
+                            background: 'none',
+                            border: 'none',
+                            padding: '0 15px'
+                          }}
+                        >
+                          <i className={`bi ${showPassword ? 'bi-eye-slash' : 'bi-eye'}`} 
+                             style={{ color: '#666' }}
+                          />
+                        </button>
+                      </div>
                     </div>
+
                     <div className="col-xl-6">
                       <label>Contact Number</label>
                       <input type="text" className="form-control bg-white border-0 py-3 px-4" value={contact} onChange={(e) => setContact(e.target.value)} title="Enter valid Contact" pattern="[0-9]{10}" />

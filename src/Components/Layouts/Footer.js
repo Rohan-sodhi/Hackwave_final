@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="row gy-4">
         <div className="col-lg-5 col-md-12 footer-info">
           <Link to="/" className="logo d-flex align-items-center">
-            <span className="text-info">Hackwave</span>
+            <span className="text-info">ByteVerse 1.0</span>
           </Link>
           <p>
            
@@ -44,12 +44,12 @@ export default function Footer() {
             <li>
               <Link to="/event">Events</Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="#">Terms of Events</Link>
             </li>
             <li>
               <Link to="#">Privacy policy</Link>
-            </li>
+            </li> */}
           </ul>
         </div>
         <div className="col-lg-2 col-6 footer-links">
@@ -95,7 +95,7 @@ export default function Footer() {
       <div className="copyright">
         ©Copyright{" "}
         <strong>
-          <span>Hackwave</span>
+          <span>ByteVerse 1.0</span>
         </strong>
         
       </div>
