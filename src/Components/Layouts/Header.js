@@ -1,10 +1,21 @@
-import { Link, useNavigate } from "react-router-dom"
+import { Link, useNavigate, useLocation } from "react-router-dom"
 import { toast } from "react-toastify"
 import { signOut } from "firebase/auth"
 import { auth } from "../../Firebase"
+import { useEffect } from "react"
+
 export default function Header() {
+  const location = useLocation();
   const mobileNavShow = document?.querySelector('.mobile-nav-show');
   const mobileNavHide = document?.querySelector('.mobile-nav-hide');
+
+  // Reset mobile navigation when route changes
+  useEffect(() => {
+    document.querySelector('body').classList.remove('mobile-nav-active');
+    mobileNavShow?.classList.remove('d-none');
+    mobileNavHide?.classList.add('d-none');
+  }, [location.pathname]);
+
   function mobileNavToogle() {
     document.querySelector('body').classList.toggle('mobile-nav-active');
     mobileNavShow?.classList.toggle('d-none');
