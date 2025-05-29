@@ -21,6 +21,12 @@ export default function Header() {
     mobileNavShow?.classList.toggle('d-none');
     mobileNavHide?.classList.toggle('d-none');
   }
+
+  function closeMobileNav() {
+    document.querySelector('body').classList.remove('mobile-nav-active');
+    mobileNavShow?.classList.remove('d-none');
+    mobileNavHide?.classList.add('d-none');
+  }
   const userId=sessionStorage.getItem("userId")
   const nav=useNavigate()
   const logout=()=>{
@@ -83,8 +89,8 @@ export default function Header() {
         </ul>
       </nav>
       {/* .navbar */}
-      <i className="mobile-nav-toggle mobile-nav-show bi bi-list"  onClick={mobileNavToogle}/>
-      <i className="mobile-nav-toggle mobile-nav-hide d-none bi bi-x" />
+      <i className="mobile-nav-toggle mobile-nav-show bi bi-list" onClick={mobileNavToogle}/>
+      <i className="mobile-nav-toggle mobile-nav-hide d-none bi bi-x" onClick={closeMobileNav} />
     </div>
   </header>
   {/* End Header */}
