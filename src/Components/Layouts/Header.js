@@ -44,7 +44,7 @@ export default function Header() {
       <Link to="/" className="logo d-flex align-items-center">
         {/* <img src="/assets/img/Your paragraph text.png" alt="ByteVerse Logo" style={{ maxHeight: '50px', marginRight: '10px' }} /> */}
         <h1>
-        ByteVerse 1.0<span>.</span>
+        HackWave<span>.</span>
         </h1>
       </Link>
       <nav id="navbar" className="navbar">
